@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div>
+        <div class="main">
+            <div class="clock-badge">
+                Australia
+            </div>
+            <div class="clock">
+                <span id="hour"></span>
+                <span id="minute"></span>
+                <span id="second"></span>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="main">
+            <div class="clock-badge">
+                Brasil (-1 dia)
+            </div>
+            <div class="clock">
+                <span id="hora"></span>
+                <span id="minutos"></span>
+                <span id="segundos"></span>
+            </div>
+        </div>
+        </div>
+
+    <script src="moment.min.js"></script>
+    <script src="moment-timezone.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
