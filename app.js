@@ -1,12 +1,17 @@
 
 function clock() {
     const fullDate = new Date();
-    const hours = fullDate.getHours();
-    const mins = fullDate.getMinutes();
-    const seconds = fullDate.getSeconds();
+    let hours = fullDate.getHours();
+    let mins = fullDate.getMinutes();
+    let seconds = fullDate.getSeconds();
     const hourEl = document.getElementById('hour');
     const minsEl = document.getElementById('minute');
     const secondsEl = document.getElementById('second');
+
+    if (hours < 10 ) { hours = "0" + hours; }
+    if (mins < 10 ) { mins = "0" + mins; }
+    if (seconds < 10 ) { seconds = "0" + seconds;}
+
 
     hourEl.innerHTML = hours + ":";
     minsEl.innerHTML = mins + ":";
