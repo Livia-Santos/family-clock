@@ -16,7 +16,7 @@ body {
     background-color: #ccc;
     width: 400px;
     height: 175px;;
-    margin: 50px auto;
+    margin: 100px auto;
     position: relative;
     padding: 30px;
     display: flex;
@@ -44,4 +44,19 @@ body {
     padding-top: 35px;
     font-family: Orbitron;
     border-radius: 5px;
+}
+
+/* media queries */
+
+@media screen and (max-width: 450px) {
+    .main {
+        width: 300px;
+        height: 150px;;
+        margin: 35px auto;
+    }
+
+    .clock {
+        font-size: 35px;
+    }
+
 }
