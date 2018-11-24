@@ -1,12 +1,9 @@
 
 function displayDate() {
     const fullDate = new Date();
-    let date = fullDate.getDate();
-    let month = fullDate.getMonth()
-    let year = fullDate.getFullYear();
-
-    const dateBadgeEl = document.querySelector('.date-badge');
-    dateBadgeEl.innerHTML = date + "/" + month + "/" + year;
+    let dateBadgeEl = document.querySelector('.date-badge');
+    date = moment(fullDate).format('DD/MM/YYYY');
+    dateBadgeEl.innerHTML = date;
 }
 displayDate();
 
@@ -38,9 +35,9 @@ moment.tz.add("America/Sao_Paulo|LMT -03 -02|36.s 30 20|012121212121212121212121
 function relogio() {
     const fullDate = new Date();
     const zone = 'America/Sao_Paulo';
-    const hora = moment(fullDate, 'HH').tz(zone).format("HH");
-    const minutos = moment(fullDate, 'mm').tz(zone).format('mm');
-    const segundos = moment(fullDate, 'ss').tz(zone).format('ss');
+    let hora = moment(fullDate, 'HH').tz(zone).format("HH");
+    let minutos = moment(fullDate, 'mm').tz(zone).format('mm');
+    let segundos = moment(fullDate, 'ss').tz(zone).format('ss');
     // Select DOM Elements
     const horaEl = document.getElementById('hora');
     const minutosEl = document.getElementById('minutos');
@@ -57,7 +54,7 @@ function displayBrazilDate() {
     const fullDate = new Date();
     const zone = 'America/Sao_Paulo';
     const data = moment(fullDate, 'DD/MM/YYYY').tz(zone).format('DD/MM/YYYY');
-    const dataBadgeEl = document.querySelector('.date-brazil');
+    let dataBadgeEl = document.querySelector('.date-brazil');
     dataBadgeEl.innerHTML = data;
 }
 
