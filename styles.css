@@ -24,6 +24,10 @@ body {
     justify-content: center;
 }
 
+.main.brazil-clock {
+    margin-top: 100px;
+}
+
 .clock-badge {
     background-color: #e66537;
     text-transform: uppercase;
@@ -33,6 +37,15 @@ body {
     font-weight: bold;
     position: absolute;
     top: -15px;
+}
+
+.date-badge {
+    background-color: #789eba;
+    color: #fff;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    position: absolute;
+    bottom: -15px;
 }
 
 .clock {

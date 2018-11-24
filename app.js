@@ -1,4 +1,16 @@
 
+function displayDate() {
+    const fullDate = new Date();
+    let date = fullDate.getDate();
+    let month = fullDate.getMonth()
+    let year = fullDate.getFullYear();
+
+    const dateBadgeEl = document.querySelector('.date-badge');
+    dateBadgeEl.innerHTML = date + "/" + month + "/" + year;
+}
+displayDate();
+
+
 function clock() {
     const fullDate = new Date();
     let hours = fullDate.getHours();
@@ -40,3 +52,13 @@ function relogio() {
 }
 
 setInterval(relogio, 100);
+
+function displayBrazilDate() {
+    const fullDate = new Date();
+    const zone = 'America/Sao_Paulo';
+    const data = moment(fullDate, 'DD/MM/YYYY').tz(zone).format('DD/MM/YYYY');
+    const dataBadgeEl = document.querySelector('.date-brazil');
+    dataBadgeEl.innerHTML = data;
+}
+
+displayBrazilDate()
